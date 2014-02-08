@@ -4,14 +4,14 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network
+QT       += core gui network multimedia
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG   += thread
 #CONFIG   += console
 
 TARGET = wsjtx
-#DESTDIR = ../qt4_install
-DESTDIR = ../wsjtx_install
+DESTDIR = ../qt4_install
+#DESTDIR = ../wsjtx_install
 VERSION = 1.1
 TEMPLATE = app
 DEFINES = QT4
@@ -71,8 +71,6 @@ FORMS    += mainwindow.ui about.ui devsetup.ui widegraph.ui \
 RC_FILE = wsjtx.rc
 
 unix {
-INCLUDEPATH += /usr/include/QtMultimediaKit
-INCLUDEPATH += /usr/include/QtMobility
 LIBS += ../wsjtx/lib/libjt9.a
 LIBS += -lhamlib
 LIBS += -lportaudio -lgfortran -lfftw3f
