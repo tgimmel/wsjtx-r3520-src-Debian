@@ -42,6 +42,7 @@ MainWindow::MainWindow(QSharedMemory *shdmem, QString *thekey, \
                        QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::MainWindow)
+//-------------------------------------
 {
   ui->setupUi(this);
 
@@ -482,7 +483,10 @@ void MainWindow::writeSettings()
   settings.setValue("TxSplit",m_bSplit);
   settings.setValue("UseXIT",m_bXIT);
   settings.setValue("XIT",m_XIT);
-  settings.setValue("Plus2kHz",m_plus2kHz);
+  //Force set to false due to bug
+  //Set by KY4J for Debian Wheezy package
+  settings.setValue("Plus2Khz", "false");
+ // settings.setValue("Plus2kHz",m_plus2kHz);
   settings.endGroup();
 }
 
