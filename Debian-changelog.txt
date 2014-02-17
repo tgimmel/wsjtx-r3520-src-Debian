@@ -1,0 +1,44 @@
+commit 288391b4a8245916fcceb6855009945562f5275f
+Author: Tim <tim@gimmel.org>
+Date:   Sat Feb 15 23:23:13 2014 -0600
+
+    Brute force fix of Segfault when 2khz checkbox is set.
+    In mainwindow.cpp, Plus2kHz is now forced to false on every program start.
+          settings.setValue("Plus2Khz", "false");
+    This is fixed in later upstream releases.
+    
+    --Tim
+
+commit 938929e33cc5d3dab4e6ba337974342be6306812
+Author: Tim <tim@gimmel.org>
+Date:   Sat Feb 8 17:40:29 2014 -0600
+
+    o Bumped the rev number to same as svn (3520) and added "-Debian" to version.
+    o Created patch file for wsjtx.pro.
+    
+    --Tim
+
+commit 0fb65fafa63e0e6e63930d71bb58213290e5c141
+Author: Tim <tim@gimmel.org>
+Date:   Sat Feb 8 17:29:59 2014 -0600
+
+    Added modifed wsjtx.pro file.  This updates the LIBS allowing it to compile in
+    Debian Wheezy.
+    To compile:
+    cd ../wsjtx/lib
+    make -f Makefile.linux
+    cd ..
+    qmake && make
+    This will place bin files into ../wsjtx_install
+    
+    --Tim
+
+commit 056f812b9026054c556a25e1ff94047d91eb0aff
+Author: Tim <tim@gimmel.org>
+Date:   Sat Feb 8 17:26:47 2014 -0600
+
+    Clean copy from svn repository of K1JT's WSJTX v1.1.1 r3520.
+    This is the last revison that will compile cleanly against QT4.  It will not compile
+    in Debian Wheezy until new qmake project file is added.
+    
+    --Tim
