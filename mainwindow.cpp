@@ -41,7 +41,8 @@ MainWindow::MainWindow(QSharedMemory *shdmem, QString *thekey, \
                        qint32 fontSize2, qint32 fontWeight2, \
                        QWidget *parent) :
   QMainWindow(parent),
-  ui(new Ui::MainWindow)
+  ui(new Ui::MainWindow),
+  psk_Reporter  (new PSK_Reporter(this))
 //-------------------------------------
 {
   ui->setupUi(this);
@@ -345,10 +346,7 @@ MainWindow::MainWindow(QSharedMemory *shdmem, QString *thekey, \
   }
 #endif
 
-#ifdef UNIX
-  psk_Reporter = new PSK_Reporter(this);
   psk_Reporter->setLocalStation(m_myCall,m_myGrid, m_antDescription[m_band], "WSJT-X r" + rev.mid(6,4) );
-#endif
 
   m_logBook.init();
 
@@ -483,10 +481,7 @@ void MainWindow::writeSettings()
   settings.setValue("TxSplit",m_bSplit);
   settings.setValue("UseXIT",m_bXIT);
   settings.setValue("XIT",m_XIT);
-  //Force set to false due to bug
-  //Set by KY4J for Debian Wheezy package
-  settings.setValue("Plus2Khz", "false");
- // settings.setValue("Plus2kHz",m_plus2kHz);
+  settings.setValue("Plus2kHz",m_plus2kHz);
   settings.endGroup();
 }
 

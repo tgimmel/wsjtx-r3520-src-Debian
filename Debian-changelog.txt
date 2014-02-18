@@ -1,3 +1,11 @@
+commit e25dd8de51096b88cb8df12759141d2b3581179a
+Author: Tim Gimmel <tim@gimmel.org>
+Date:   Sun Feb 16 22:25:57 2014 -0600
+
+    Added WSJTX users guide in pdf format and added Debian changelog.
+    
+    --Tim
+
 commit 288391b4a8245916fcceb6855009945562f5275f
 Author: Tim <tim@gimmel.org>
 Date:   Sat Feb 15 23:23:13 2014 -0600
