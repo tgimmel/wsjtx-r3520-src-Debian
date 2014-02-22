@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=0.0
+Name=wsjtx
+Comment=Weak Signal Ham Radio
+Exec=/usr/bin/wsjtx
+Icon=wsjtx
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;HamRadio;

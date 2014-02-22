@@ -1,0 +1,23 @@
+#!/bin/sh
+set -e
+
+# wsjtx expects to write configuration files in the current directory,
+# which also needs to contain CALL3.TXT before starting.
+# If those don't currently exist, create them first.
+
+cp -r --update /usr/share/wsjtx/.wsjtx $HOME
+
+RUNDIR=$HOME/.wsjtx
+cd $RUNDIR
+
+# wsjtx gets an error if this file does not exist, when trying to "Log QSO"
+if [ ! -f CALL3.TXT ]; then
+	touch CALL3.TXT
+fi
+# wsjtx & jt9 use applicationDirPath for configuration path prefix,
+#   so they must reside here, in user's configuration dir
+cp --update /usr/lib/wsjtx/jt9 jt9
+cp --update /usr/lib/wsjtx/wsjtx wsjtx
+
+./wsjtx
+

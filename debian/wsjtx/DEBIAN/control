@@ -1,0 +1,12 @@
+Package: wsjtx
+Version: 1.1.1.r3520-5+Wheezy
+Architecture: i386
+Maintainer: Tim Gimmel <tim@gimmel.org>
+Installed-Size: 2289
+Depends: libc6 (>= 2.1), libfftw3-3, libgcc1 (>= 1:4.7.2), libgfortran3 (>= 4.7.2), libhamlib2 (>= 1.2.15.1), libportaudio2 (>= 19+svn20111121), libqt4-network (>= 4:4.8.2), libqtcore4 (>= 4:4.8.2), libqtgui4 (>= 4:4.8.2), libstdc++6 (>= 4.7.2), libhamlib-utils (>= 1.2.15.1)
+Section: hamradio
+Priority: optional
+Homepage: http://www.physics.princeton.edu/pulsar/K1JT/wsjtx.html
+Description: weak-signal amateur radio communications
+ wsjtx is designed to facilitate Amateur Radio communication under extreme
+ weak-signal conditions using modes JT9 and JT65.
