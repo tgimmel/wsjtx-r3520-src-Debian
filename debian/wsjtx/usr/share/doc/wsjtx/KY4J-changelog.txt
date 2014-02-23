@@ -1,3 +1,21 @@
+commit 0ba6f11e9f68fbd6e4954bcbbb1d719281cb2dc6
+Author: Tim Gimmel <tim@gimmel.org>
+Date:   Sun Feb 23 11:33:37 2014 -0600
+
+    Commit to bump to 1.1.1r3520-5+Wheezy
+    
+    --Tim
+
+commit 0a3b1cdbb4fe2bbe4aa1ec35a77406ec651c0c0f
+Author: Tim Gimmel <tim@gimmel.org>
+Date:   Sat Feb 22 13:55:33 2014 -0600
+
+    Moved Debian build tree into "debian" directory in the wsjtx source tree.
+    Added pixmap and menu item to package.
+    Now wsjtx-1.1.1r3520-4 RC
+    
+    --Tim
+
 commit 127da096e6571331f150eb4ca05896823842d79b
 Author: Tim Gimmel <tim@gimmel.org>
 Date:   Mon Feb 17 20:03:10 2014 -0600
